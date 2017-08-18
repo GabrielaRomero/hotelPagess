@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <link rel="apple-touch-icon" sizes="76x76" href="<%=asset_path'png/hotel-8.png'%>">
+      <link rel="icon" type="image/png" sizes="96x96" href="<%=asset_path'png/hotel-8.png'%>">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+      <title>Hotel´s Page</title>
+
+      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+      <meta name="viewport" content="width=device-width" />
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+      
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar" data-background-color="white" data-active-color="danger">
+
+        <div class="sidebar-wrapper">
+          <div class="logo">
+            <a href="#" class="simple-text">
+              Hotel´s Page
+            </a>
+          </div>
+
+          <ul class="nav">
+            <li class="<%=  @inicio %>">
+              <a href="/inicio/index">
+                <i class="">
+                  <img src="<%=asset_path'png/hotel-3.png'%>" style="height: 40px; width: 40px;">
+                </i>
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li class="<%=  @hotel %>">
+              <a href="/hoteles/index">
+                <i class="">
+                  <img src="<%=asset_path'png/hotel-1.png'%>" style="height: 40px; width: 40px;">
+                </i>
+                <p>Hoteles</p>
+              </a>
+            </li>
+            <li class="<%=  @ubicacion %>">
+              <a href="/geolocalizacion/index">
+                <i class="">
+                  <img src="<%=asset_path'png/map.png'%>" style="height: 40px; width: 40px;">
+                </i>
+                  <p>Ubicaci&oacute;n</p>
+              </a>
+            </li>
+            <li class="<%=  @contacto %>">
+              <a href="/contacto/index">
+                <i class="">
+                  <img src="<%=asset_path'png/guia-telefonica'%>" style="height: 40px; width: 40px;">
+                </i>
+                <p>Contacto</p>
+              </a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+
+        
+        
+      <div class="main-panel">
+
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle">
+                <span class="sr-only"></span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+              </button>
+              <a class="navbar-brand" href="#">Bienvenido a Hotel´s Page</a>
+            </div>
+            <div class="collapse navbar-collapse">
+            </div>
+          </div>
+        </nav>
+
+        <div class="content">
+            <div class="container-fluid">
+
+              <%= yield %>
+                
+            </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container-fluid">
+              <nav class="pull-left">
+                <ul>
+                  <li>
+                    <a href="#">
+                      Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Youtube
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="copyright pull-right">
+                  &copy; <script>document.write(new Date().getFullYear())</script>, Hecho por <a href="#">SoftTI</a>
+              </div>
+            </div>
+        </footer>
+
+      </div>
+    </div>
+  </body>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</html>

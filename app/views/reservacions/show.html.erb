@@ -1,0 +1,73 @@
+<div class="col-lg-8 col-md-7">
+  <div class="card">
+      <div class="header">
+          <h4 class="title">Reservacion Completa!!!</h4>
+      </div>
+      <p class="category">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datos del usuario, de la pre-reservacion. Si alguno de los datos mostrados esta incorrecto,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAVOR de ponerse en contacto con el administrador.</p>
+      <div class="content">
+          
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Nombre %>">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Correo %>">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre del Hotel</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Hotel %>">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Numero de Telefono</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Telefono %>">
+                </div>
+            </div>
+        </div>
+          
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Fecha de inicio</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Fecha_llegada %>">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Fecha de fin</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Fecha_retiro %>">
+                </div>
+            </div>
+        </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>No. Personas</label>
+                    <input type="text" class="form-control border-input" disabled value="<%= @reservacion.Numero_Personas %>">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-center">
+                    <a href="/hoteles/index" class="btn btn-danger btn-wd">Regresar</a>
+                </div>
+            </div>
+        </div>
+          
+        
+        <div class="clearfix"></div>
+      </div>
+  </div>
+</div>
+
